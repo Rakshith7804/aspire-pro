@@ -52,7 +52,7 @@ export const Layout = ({ children }: LayoutProps) => {
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary",
+                    "flex items-center gap-2 text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105",
                     isActive ? "text-primary" : "text-muted-foreground"
                   )}
                 >

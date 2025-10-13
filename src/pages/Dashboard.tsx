@@ -38,9 +38,9 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 animate-fade-in">
       {/* Hero Section */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-hero p-8 shadow-elegant">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-hero p-8 shadow-elegant animate-scale-in">
         <div className="relative z-10">
           <h1 className="mb-2 text-3xl font-bold">Welcome back! 👋</h1>
           <p className="text-lg text-muted-foreground">
@@ -52,7 +52,7 @@ export default function Dashboard() {
 
       {/* Key Metrics */}
       <div className="grid gap-6 md:grid-cols-3">
-        <Card className="group p-6 transition-all hover:shadow-glow">
+        <Card className="group p-6 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 animate-fade-up" style={{ animationDelay: "0.1s" }}>
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">ATS Score</p>
@@ -75,7 +75,7 @@ export default function Dashboard() {
           </Link>
         </Card>
 
-        <Card className="group p-6 transition-all hover:shadow-glow">
+        <Card className="group p-6 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 animate-fade-up" style={{ animationDelay: "0.2s" }}>
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">Active Applications</p>
@@ -97,7 +97,7 @@ export default function Dashboard() {
           </Link>
         </Card>
 
-        <Card className="group p-6 transition-all hover:shadow-glow">
+        <Card className="group p-6 transition-all duration-300 hover:shadow-glow hover:-translate-y-1 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           <div className="flex items-center justify-between">
             <div>
               <p className="text-sm font-medium text-muted-foreground">Skills to Learn</p>
@@ -139,7 +139,7 @@ export default function Dashboard() {
               const Icon = config.icon;
 
               return (
-                <div key={idx} className="flex items-start gap-4 rounded-lg border p-4 transition-all hover:border-primary">
+                <div key={idx} className="flex items-start gap-4 rounded-lg border p-4 transition-all duration-300 hover:border-primary hover:shadow-card hover:-translate-y-0.5">
                   <div className={`rounded-lg ${config.bg} p-2.5`}>
                     <Icon className={`h-5 w-5 ${config.color}`} />
                   </div>
@@ -171,7 +171,7 @@ export default function Dashboard() {
           </div>
           <div className="space-y-4">
             {recommendedJobs.map((job, idx) => (
-              <div key={idx} className="flex items-start gap-4 rounded-lg border p-4 transition-all hover:border-primary">
+              <div key={idx} className="flex items-start gap-4 rounded-lg border p-4 transition-all duration-300 hover:border-primary hover:shadow-card hover:-translate-y-0.5">
                 <div className="flex-1 space-y-2">
                   <div className="flex items-start justify-between">
                     <div>

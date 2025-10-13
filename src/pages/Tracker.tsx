@@ -153,13 +153,13 @@ export default function Tracker() {
 
       {/* Applications List */}
       <div className="space-y-4">
-        {applications.map((app) => {
+        {applications.map((app, idx) => {
           const config = statusConfig[app.status as keyof typeof statusConfig];
           const Icon = config.icon;
           const progress = (app.stage / app.totalStages) * 100;
 
           return (
-            <Card key={app.id} className="overflow-hidden transition-all hover:shadow-card">
+            <Card key={app.id} className="overflow-hidden transition-all duration-300 hover:shadow-card hover:-translate-y-0.5 animate-fade-up" style={{ animationDelay: `${idx * 0.05}s` }}>
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
                   {/* Icon & Info */}

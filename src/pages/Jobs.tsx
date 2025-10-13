@@ -174,8 +174,8 @@ export default function Jobs() {
 
       {/* Job Listings */}
       <div className="space-y-4">
-        {jobs.map((job) => (
-          <Card key={job.id} className="overflow-hidden transition-all hover:shadow-elegant">
+        {jobs.map((job, idx) => (
+          <Card key={job.id} className="overflow-hidden transition-all duration-300 hover:shadow-elegant hover:-translate-y-1 animate-fade-up" style={{ animationDelay: `${idx * 0.1}s` }}>
             <div className="p-6">
               <div className="flex items-start justify-between gap-4">
                 <div className="flex-1 space-y-3">
