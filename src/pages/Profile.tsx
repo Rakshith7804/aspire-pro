@@ -37,21 +37,8 @@ export default function Profile() {
 
   return (
     <div className="space-y-0 pb-16">
-      {/* Cover Banner */}
-      <div className="relative h-64 overflow-hidden rounded-t-lg bg-gradient-to-br from-primary via-primary-glow to-accent animate-fade-in">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-        <Button
-          variant="secondary"
-          size="sm"
-          className="absolute right-4 top-4"
-        >
-          <Edit className="mr-2 h-4 w-4" />
-          Edit Cover
-        </Button>
-      </div>
-
-      {/* Profile Header - Overlaps Banner */}
-      <div className="relative -mt-20 px-8">
+      {/* Profile Header */}
+      <div className="relative px-8 pt-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           {/* Avatar & Basic Info */}
           <div className="flex items-end gap-6">
@@ -166,26 +153,6 @@ export default function Profile() {
             </CardContent>
           </Card>
 
-          {/* Resume & Documents */}
-          <Card className="animate-fade-up shadow-card transition-all duration-300 hover:shadow-elegant" style={{ animationDelay: "200ms" }}>
-            <CardHeader>
-              <CardTitle className="text-lg">Documents</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-2">
-              <Button variant="outline" className="w-full justify-start" size="sm">
-                <FileText className="mr-2 h-4 w-4" />
-                Download Resume
-              </Button>
-              <Button variant="outline" className="w-full justify-start" size="sm">
-                <Sparkles className="mr-2 h-4 w-4" />
-                Generate ATS Resume
-              </Button>
-              <Button variant="outline" className="w-full justify-start" size="sm">
-                <Download className="mr-2 h-4 w-4" />
-                Download Portfolio
-              </Button>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Right Main Content - 75% */}
@@ -592,60 +559,6 @@ export default function Profile() {
             </CardContent>
           </Card>
 
-          {/* Recommendations Section */}
-          <Card className="shadow-card transition-all duration-300 hover:shadow-elegant animate-fade-up" style={{ animationDelay: "700ms" }}>
-            <CardHeader className="flex flex-row items-center justify-between">
-              <CardTitle className="flex items-center gap-2">
-                💬 Recommendations
-              </CardTitle>
-              <Button variant="outline" size="sm">
-                Request Recommendation
-              </Button>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="rounded-lg border p-4">
-                <div className="flex items-start gap-3">
-                  <Avatar className="h-10 w-10">
-                    <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah" />
-                    <AvatarFallback>SM</AvatarFallback>
-                  </Avatar>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-semibold">Sarah Mitchell</h4>
-                        <p className="text-sm text-muted-foreground">Engineering Manager at Infosys</p>
-                      </div>
-                    </div>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      "John is an exceptional developer with strong technical skills and great teamwork. 
-                      His ability to deliver complex projects on time while mentoring junior developers is remarkable."
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-lg border p-4">
-                <div className="flex items-start gap-3">
-                  <Avatar className="h-10 w-10">
-                    <AvatarImage src="https://api.dicebear.com/7.x/avataaars/svg?seed=Michael" />
-                    <AvatarFallback>MC</AvatarFallback>
-                  </Avatar>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h4 className="font-semibold">Michael Chen</h4>
-                        <p className="text-sm text-muted-foreground">CTO at TechCorp</p>
-                      </div>
-                    </div>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      "John's expertise in full-stack development and his proactive approach to problem-solving 
-                      made him an invaluable asset to our team. Highly recommended!"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>
